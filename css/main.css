@@ -1,44 +1,207 @@
+/* Enhanced CSS for idimakos.github.io */
+
 body {
     margin: 60px auto;
     width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    
-}
-a:hover {
-    text-decoration: underline;
-}
-h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-}
-p {
-    font-size: 1.5em;
-    line-height: 1.4em;
+    max-width: 800px;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
     color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
+    background-color: #fafafa;
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+/* Navigation */
+nav {
+    border-bottom: 2px solid #2c3e50;
+    margin-bottom: 40px;
+    padding-bottom: 10px;
 }
 
-ul.posts li {
-    font-size: 1.5em;   
+nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 1.4em;
+    color: #34495e;
+    margin-top: 25px;
+}
+
+/* Image styling */
+img {
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+a:hover {
+    border-bottom: 1px solid #3498db;
+}
+
+/* Paragraphs */
+p {
+    margin: 1.2em 0;
+    text-align: justify;
+}
+
+/* Lists */
+ul, ol {
+    line-height: 1.8;
+}
+
+ul li, ol li {
+    margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+    border-top: 2px solid #2c3e50;
+    margin-top: 60px;
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+/* Contact links styling */
+footer a {
+    color: #7f8c8d;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #3498db;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        width: 90%;
+        font-size: 16px;
+        margin: 30px auto;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    img {
+        max-width: 100%;
+    }
+}
+
+/* Code blocks (if you add any) */
+code {
+    background-color: #ecf0f1;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+pre {
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    border-left: 4px solid #3498db;
+}
+
+/* Blog post styling (for future blog posts) */
+.post-meta {
+    color: #7f8c8d;
+    font-size: 0.9em;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+
+.post-list li {
+    margin: 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.post-list h2 {
+    margin-top: 0;
+}
+
+/* Subtle animation for page load */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body > * {
+    animation: fadeIn 0.6s ease-out;
 }
