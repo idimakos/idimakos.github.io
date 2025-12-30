@@ -196,6 +196,24 @@ pre {
     margin-top: 0;
 }
 
+/* custom project stying */
+.project {
+    margin-bottom: 35px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    border-left: 4px solid #3498db;
+    transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
 /* Subtle animation for page load */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
